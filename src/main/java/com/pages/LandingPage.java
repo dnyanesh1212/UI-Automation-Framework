@@ -1,6 +1,7 @@
 package com.pages;
 
 import com.base.BaseTest;
+import com.utils.CommonUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,28 +11,39 @@ public class LandingPage {
 
     public WebDriver driver;
     RegisterPage registerPage;
+    CommonUtils commonUtils;
 
     // Landing Page objects
     @FindBy(xpath = "//a[@title='My Account']") private WebElement myAccountBtn;
     @FindBy(xpath = "//a[.='Register']") private WebElement registerBtn;
     @FindBy(xpath = "//a[.='Login']") private WebElement loginBtn;
 
-    //constructor to initialize page objects
+    //constructor to initialize landing page objects
     public LandingPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
+        this.commonUtils = new CommonUtils(driver);
     }
 
+    // Action methods for landing page objects
     public RegisterPage goToRegisterPage(){
-        myAccountBtn.click();
-        registerBtn.click();
+        if (commonUtils.waitForElementToBeClickable(myAccountBtn))
+            myAccountBtn.click();
+
+        if (commonUtils.waitForElementToBeClickable(registerBtn))
+            registerBtn.click();
+
         registerPage = new RegisterPage(driver);
         return registerPage;
     }
 
     public LoginPage goToLoginPage(){
-        myAccountBtn.click();
-        loginBtn.click();
+        if (commonUtils.waitForElementToBeClickable(myAccountBtn))
+            myAccountBtn.click();
+
+        if (commonUtils.waitForElementToBeClickable(loginBtn))
+            loginBtn.click();
+
         LoginPage loginPage = new LoginPage(driver);
         return loginPage;
     }

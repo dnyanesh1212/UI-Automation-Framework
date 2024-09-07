@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-09-06T16:18:32 IST" name="Surefire suite" finished-at="2024-09-06T16:18:43 IST" duration-ms="11414">
+    <groups>
+    </groups>
+    <test started-at="2024-09-06T16:18:32 IST" name="Surefire test" finished-at="2024-09-06T16:18:43 IST" duration-ms="11414">
+      <class name="com.tests.LoginPageTest">
+        <test-method signature="firstProgram()[pri:0, instance:com.tests.LoginPageTest@649bec2e]" started-at="2024-09-06T16:18:32 IST" name="firstProgram" finished-at="2024-09-06T16:18:38 IST" duration-ms="5597" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstProgram -->
+      </class> <!-- com.tests.LoginPageTest -->
+      <class name="com.tests.RegisterPageTest">
+        <test-method is-config="true" signature="goToApplication()[pri:0, instance:com.tests.RegisterPageTest@6c130c45]" started-at="2024-09-06T16:18:38 IST" name="goToApplication" finished-at="2024-09-06T16:18:41 IST" duration-ms="3429" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToApplication -->
+        <test-method signature="firstProgram()[pri:0, instance:com.tests.RegisterPageTest@6c130c45]" started-at="2024-09-06T16:18:41 IST" name="firstProgram" finished-at="2024-09-06T16:18:43 IST" duration-ms="2102" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- firstProgram -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.RegisterPageTest@6c130c45]" started-at="2024-09-06T16:18:43 IST" name="tearDown" finished-at="2024-09-06T16:18:43 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tests.RegisterPageTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

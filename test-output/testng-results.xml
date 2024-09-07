@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-09-06T17:21:28 IST" name="All Test Suite" finished-at="2024-09-06T17:21:35 IST" duration-ms="6956">
+  <suite started-at="2024-09-06T23:46:39 IST" name="Default Suite" finished-at="2024-09-06T23:46:47 IST" duration-ms="8085">
     <groups>
     </groups>
-    <test started-at="2024-09-06T17:21:28 IST" name="C:/Users/dnyan/IdeaProjects/Selenium Hybrid Framework" finished-at="2024-09-06T17:21:35 IST" duration-ms="6956">
+    <test started-at="2024-09-06T23:46:39 IST" name="Selenium Hybrid Framework" finished-at="2024-09-06T23:46:47 IST" duration-ms="8085">
       <class name="com.tests.RegisterPageTest">
-        <test-method is-config="true" signature="goToApplication()[pri:0, instance:com.tests.RegisterPageTest@5552768b]" started-at="2024-09-06T17:21:28 IST" name="goToApplication" finished-at="2024-09-06T17:21:31 IST" duration-ms="2615" status="PASS">
+        <test-method is-config="true" signature="goToApplication()[pri:0, instance:com.tests.RegisterPageTest@236e3f4e]" started-at="2024-09-06T23:46:39 IST" name="goToApplication" finished-at="2024-09-06T23:46:44 IST" duration-ms="5079" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToApplication -->
-        <test-method signature="firstProgram()[pri:0, instance:com.tests.RegisterPageTest@5552768b]" started-at="2024-09-06T17:21:31 IST" name="firstProgram" finished-at="2024-09-06T17:21:34 IST" duration-ms="3820" status="PASS">
+        <test-method signature="firstProgram()[pri:0, instance:com.tests.RegisterPageTest@236e3f4e]" started-at="2024-09-06T23:46:44 IST" name="firstProgram" finished-at="2024-09-06T23:46:47 IST" duration-ms="2693" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- firstProgram -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.RegisterPageTest@5552768b]" started-at="2024-09-06T17:21:34 IST" name="tearDown" finished-at="2024-09-06T17:21:35 IST" duration-ms="217" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tests.RegisterPageTest@236e3f4e]" started-at="2024-09-06T23:46:47 IST" name="tearDown" finished-at="2024-09-06T23:46:47 IST" duration-ms="226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.tests.RegisterPageTest -->
-    </test> <!-- C:/Users/dnyan/IdeaProjects/Selenium Hybrid Framework -->
-  </suite> <!-- All Test Suite -->
+    </test> <!-- Selenium Hybrid Framework -->
+  </suite> <!-- Default Suite -->
 </testng-results>

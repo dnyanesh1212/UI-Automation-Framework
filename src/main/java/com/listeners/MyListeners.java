@@ -3,7 +3,6 @@ package com.listeners;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.base.BaseTest;
 import com.utils.CommonUtils;
 import com.utils.ExtentReporter;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +20,7 @@ public class MyListeners implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
         extentReporter = ExtentReporter.generateExtentReport();
-        commonUtils = new CommonUtils();
+        commonUtils = new CommonUtils(driver);
         System.out.println("Project execution started");
     }
 

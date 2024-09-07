@@ -3,12 +3,23 @@ package com.utils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 public class CommonUtils {
+    WebDriver driver;
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(PageConstants.LOW));
+
+    public CommonUtils(WebDriver driver) {
+        this.driver = driver;
+    }
+
     public String captureScreenshot(WebDriver driver, String testName){
         File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         String userPath = System.getProperty("user.dir");
@@ -21,5 +32,18 @@ public class CommonUtils {
         }
 
         return path;
+    }
+
+    public boolean waitForElementToBeClickable(WebElement element){
+        try {
+                wait.until(ExpectedConditions.elementToBeClickable(element));
+                return true;
+
+        } catch (Exception e) {
+
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+            throw new RuntimeException("Element is not clickable " + e.getMessage());
+
+        }
     }
 }

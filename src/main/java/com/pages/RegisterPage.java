@@ -25,7 +25,7 @@ public class RegisterPage {
         PageFactory.initElements(driver,this);
     }
 
-    // Action methods for page objects
+    // Action methods for register page objects
     public void doRegister(String firstName, String lastName,String email, String telephone, String password, String confirmPassword){
 
         firstNameTxt.sendKeys(firstName);
