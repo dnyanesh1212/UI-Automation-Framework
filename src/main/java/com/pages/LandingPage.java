@@ -27,10 +27,10 @@ public class LandingPage {
 
     // Action methods for landing page objects
     public RegisterPage goToRegisterPage(){
-        if (commonUtils.waitForElementToBeClickable(myAccountBtn))
+        if (commonUtils.isClickable(myAccountBtn))
             myAccountBtn.click();
 
-        if (commonUtils.waitForElementToBeClickable(registerBtn))
+        if (commonUtils.isClickable(registerBtn))
             registerBtn.click();
 
         registerPage = new RegisterPage(driver);
@@ -38,10 +38,10 @@ public class LandingPage {
     }
 
     public LoginPage goToLoginPage(){
-        if (commonUtils.waitForElementToBeClickable(myAccountBtn))
+        if (commonUtils.isClickable(myAccountBtn))
             myAccountBtn.click();
 
-        if (commonUtils.waitForElementToBeClickable(loginBtn))
+        if (commonUtils.isClickable(loginBtn))
             loginBtn.click();
 
         LoginPage loginPage = new LoginPage(driver);

@@ -14,10 +14,11 @@ import java.time.Duration;
 
 public class CommonUtils {
     WebDriver driver;
-    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(PageConstants.LOW));
+    WebDriverWait wait;
 
     public CommonUtils(WebDriver driver) {
         this.driver = driver;
+        wait = new WebDriverWait(driver, Duration.ofSeconds(PageConstants.LOW));
     }
 
     public String captureScreenshot(WebDriver driver, String testName){
@@ -34,8 +35,9 @@ public class CommonUtils {
         return path;
     }
 
-    public boolean waitForElementToBeClickable(WebElement element){
+    public boolean isClickable(WebElement element){
         try {
+                wait.until(ExpectedConditions.visibilityOf(element));
                 wait.until(ExpectedConditions.elementToBeClickable(element));
                 return true;
 
